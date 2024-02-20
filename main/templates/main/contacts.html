@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Контакти{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Контакти</h1>
+        <p>Якщо у вас є питання, пропозиції чи потреба в допомозі, будь ласка, не соромтеся зв'язатися з нашою командою. Ми відгукнемося на ваші повідомлення якнайшвидше.
+
+Електронна пошта: your.email@example.com
+
+Телефон: +0000000000</p>
+           <a href="{% url 'news_home'  %}" class="btn btn-info">Події</a>
+           <a href="{% url 'about'  %}" class="btn btn-warning">Про нас</a>
+           <a href="{% url 'create'  %}" class="btn btn-danger">Створити подію</a>
+    </div>
+{% endblock %}
+
+

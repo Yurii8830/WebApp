@@ -1,0 +1,27 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+        <p>Ласкаво просимо на головну сторінку нашого веб-додатку!
+
+Тут ви знайдете зручний і інтуїтивно зрозумілий інтерфейс для планування подій, спілкування та організації свого часу. Наш додаток, розроблений з використанням мови програмування Python, фреймворка Django, HTML, CSS та бази даних MySQL, пропонує широкий спектр можливостей для кращого управління вашими подіями та контактами.</p>
+
+           <a href="{% url 'news_home'  %}" class="btn btn-info">Події</a>
+           <a href="{% url 'about'  %}" class="btn btn-warning">Про нас</a>
+           <a href="{% url 'create'  %}" class="btn btn-danger">Створити подію</a>
+
+
+        {% for el in values %}
+        <p>{{ el }}</p>
+        {% endfor %}
+
+          {% for el in obj %}
+        <p>{{ el }}</p>
+        {% endfor %}
+
+
+    </div>
+{% endblock %}
